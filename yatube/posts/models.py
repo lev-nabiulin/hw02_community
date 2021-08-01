@@ -8,7 +8,7 @@ User = get_user_model()
 class Post(models.Model):
     group = models.ForeignKey(
         'Group',
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
         blank=True, null=True)
     text = models.TextField()
     pub_date = models.DateTimeField(auto_now_add=True)

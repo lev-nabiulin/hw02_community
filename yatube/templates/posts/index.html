@@ -1,7 +1,5 @@
-<!DOCTYPE html> <!-- Используется html 5 версии -->
 {% extends 'base.html' %}
 {% block content %}
-  <h1>{{ text }}</h1>
   {% for post in posts %}
     <ul>
       <li>
@@ -12,7 +10,7 @@
       </li>
     </ul>
     <p>{{ post.text }}</p>    
-    <a href="{{group_posts}}">все записи группы</a>
+     <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
   {% if not forloop.last %}<hr>{% endif %}
   {% endfor %} 
 {% endblock %} 

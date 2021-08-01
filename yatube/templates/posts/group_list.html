@@ -1,11 +1,8 @@
-<!DOCTYPE html> <!-- Используется html 5 версии -->
 {% extends 'base.html' %}
 {% block title %} 
 {{ group.title }}
 {% endblock %}
 {% block content %}
-<head>
-</head>
   <h1>{{ group.title }}</h1>
   <p>{{ group.description }}</p>
   {% for post in posts %}
